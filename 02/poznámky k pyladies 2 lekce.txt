@@ -1,0 +1,65 @@
+Microsoft Windows [Version 10.0.18362.356]
+(c) 2019 Microsoft Corporation. Všechna práva vyhrazena.
+
+C:\Users\lucka>cd
+C:\Users\lucka
+
+C:\Users\lucka>cd documents
+
+C:\Users\lucka\Documents>cd Pyladies
+
+C:\Users\lucka\Documents\Pyladies>cd 02
+
+C:\Users\lucka\Documents\Pyladies\02>cd..
+
+C:\Users\lucka\Documents\Pyladies>venv\Scripts\activate
+
+(venv) C:\Users\lucka\Documents\Pyladies>cd 02
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+obvod ctverce se stranou 356 cm je 1424 cm
+obsah ctverce se stranou 356 cm je 126736 cm2
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+  File "ctverec.py", line 3
+    print('obsah ctverce se stranou', strana, 'je' strana**2, 'cm2')
+                                                        ^
+SyntaxError: invalid syntax
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+obvod ctverce se stranou 123 je 492 cm
+obsah ctverce se stranou 123 je 15129 cm2
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+Zadej cislo:123
+obvod ctverce se stranou 123 je 492 cm
+obsah ctverce se stranou 123 je 15129 cm2
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+  File "ctverec.py", line 6
+    else print_je_spravne:
+                        ^
+SyntaxError: invalid syntax
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+Zadej stranu čtverce v centimetrech:56
+Traceback (most recent call last):
+  File "ctverec.py", line 3, in <module>
+    if print_je_spravne:
+NameError: name 'print_je_spravne' is not defined
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+Zadej stranu čtverce v centimetrech:35
+obvod ctverce se stranou 35.0 je 140.0 cm
+obsah ctverce se stranou 35.0 je 1225.0 cm2
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+Zadej stranu čtverce v centimetrech:-3
+strana musi byt kladna
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>python ctverec.py
+Zadej stranu čtverce v centimetrech:78
+obvod ctverce se stranou 78.0 je 312.0 cm
+obsah ctverce se stranou 78.0 je 6084.0 cm2
+
+(venv) C:\Users\lucka\Documents\Pyladies\02>
