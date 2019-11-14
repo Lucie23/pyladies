@@ -1,25 +1,22 @@
-while 1==1:
-    cislo = input('Zadej rodne cislo ve spravnem formatu:')
-    # spravny format: 6 cislic, /, 4 cislice
-    pocet_cisel = (cislo.replace('/',''))
-    cislo_1 = pocet_cisel[:6]
-    cislo_2 = pocet_cisel[6:]
-    if len(cislo) != 11:
-        print('Cislo neobsahuje pozadovany pocet znaku.')
-        continue
-    elif cislo[6] != '/':
-        print('Cislo neobsahuje '/' na spravnem miste.')
-        continue
-    elif int(pocet_cisel) % 11 != 0:
-        print('Cislo neni delitelne jedenacti.')
-        continue
-    elif not cislo_1.isnumeric():
-        print('Cislo nema pozadovane znaky.')
-        continue
-    elif not cislo_2.isnumeric():
-        print('Cislo nema pozadovane znaky.') 
-        continue
-    else:
-        break 
+rodne_cislo = input('Zadej rodne cislo ve spravnem formatu:')
+# spravny format: 6 cislic, /, 4 cislice
 
-print('Toto je platne rodne cislo.') 
+format_cisla = rodne_cislo[:6] + rodne_cislo[7:]
+
+if len(rodne_cislo) != 11:
+    print('Cislo neobsahuje pozadovany pocet znaku.')
+
+elif rodne_cislo[6] != "/":
+    print('Cislo neobsahuje '/' na spravnem miste.')
+
+elif int(format_cisla) % 11 != 0:
+    print('Cislo neni delitelne jedenacti.')
+
+elif not rodne_cislo[:6].isdigit():
+    print('Cislo neobsahuje spravne znaky.')
+
+elif not rodne_cislo[7:].isdigit():
+    print('Cislo nema pozadovane znaky.')
+
+else:
+    print("Toto cislo je napsano spravne.")
