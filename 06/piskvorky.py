@@ -1,6 +1,6 @@
 from random import randrange
 
-pole = '--------------'
+pole = '--------------------'
 cislo_pole = False
 symbol = 'X' or 'O'
 
@@ -8,11 +8,11 @@ def tah(pole, cislo_pole, symbol):
     pole_list = list(pole)
     pole_list[cislo_pole] = symbol
     pole = "".join(pole_list)
-    tah_clovek(pole, cislo_pole, symbol)
-    tah_pc(pole, cislo_pole, symbol)
+    print(pole)
     return pole
+    
 
-def tah_clovek(pole, cislo_pole, symbol):
+def tah_clovek(pole, cislo_pole):
     symbol = 'X'
     pole_list = list(pole)
     while True:
@@ -29,33 +29,33 @@ def tah_clovek(pole, cislo_pole, symbol):
             return pole
         else:
             print('Toto pole je obsazene, vyber jine.')
-            return tah_clovek(pole, cislo_pole, symbol)
+            return tah_clovek(pole, cislo_pole)
     else:
         print('Toto pole neexistuje, vyber jine.')
-    return tah_clovek(pole, cislo_pole, symbol)
+    return tah_clovek(pole, cislo_pole)
 
-def tah_pc(pole, cislo_pole, symbol):
+def tah_pc(pole):
     symbol = 'O'
     cislo_pole = randrange(20)
-    if pole_list[cislo_pole] == '-':
+    if pole[cislo_pole] == '-':
         print('Pocitac zvolil toto pole')
         pole = tah(pole, cislo_pole, symbol)    
         return pole
-    return tah_pc(pole, cislo_pole, symbol)
+    return tah_pc(pole)
 
 def vysledek_hry(pole):
     if 'OOO' in pole:
         print('pocitac vyhral')
         return False
     elif 'XXX' in pole:
-        print('vyhrala jsi!')
+        print('vyhrala jsi')
         return False
     elif '-' not in pole:
         print('remiza')
         return False
     else:
         print('hra jeste neskoncila')
-        return 
+        return True
 
 def hra(pole):
     print('Nyni si zahrajeme piskvorky. Hrac ma symbol X a pocitac O.')
@@ -63,11 +63,11 @@ def hra(pole):
         if vysledek_hry(pole) == False:
             break
         else:
-            pole = tah_clovek(pole, cislo_pole, symbol)
+            pole = tah_clovek(pole, cislo_pole)
         if vysledek_hry(pole) == False:
             break
         else:
-            pole = tah_pc(pole, cislo_pole, symbol)
+            pole = tah_pc(pole)
     if '-' not in pole:
         vysledek_hry(pole)
     return print('Hra skoncila.')
