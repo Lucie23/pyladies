@@ -1,16 +1,9 @@
-import ai
-import util
+from util import tah
+from ai import tah_pc
 
 pole = '--------------------'
 cislo_pole = False
 symbol = 'X' or 'O'
-
-def tah(pole, cislo_pole, symbol):
-    pole_list = list(pole)
-    pole_list[cislo_pole] = symbol
-    pole = "".join(pole_list)
-    print(pole)
-    return pole
 
 def tah_clovek(pole, cislo_pole):
     symbol = 'X'

@@ -1,6 +1,6 @@
 from random import randrange
 
-import util
+from util import tah
 
 def tah_pc(pole):
     symbol = 'O'

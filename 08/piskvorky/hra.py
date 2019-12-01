@@ -1,3 +1,3 @@
-import ai, util, piskvorky
+from piskvorky import *
 
 hra(pole)
